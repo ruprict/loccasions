@@ -1,0 +1,20 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color:#f2efe8;
+}
+#header {
+  text-indent:-9999px;
+  background:url("locassionsheader.png") #f2efe8 top center;
+  height:200px;
+
+}
+#sign_in {
+  height: 40px;
+  margin-top:10px;
+  a {
+    float:right;
+  }
+  
+}

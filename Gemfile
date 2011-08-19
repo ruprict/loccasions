@@ -5,6 +5,8 @@ gem 'devise', "~> 1.4.2"
 gem 'mongoid', "~> 2.1.8"
 gem 'mongoid_spacial', "~> 0.2.13"
 gem 'haml', '~> 3.1.2'
+gem 'haml-rails', '~> 0.3.4'
+gem 'bson_ext', '~> 1.3.1'
 
 gem 'rails-backbone', "~> 0.5.3"
 
