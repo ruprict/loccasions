@@ -34,37 +34,5 @@
   .container
     #sign_in.sixteen.columns
       %a(href = "#") Sign In
-    #header.sixteen.columns
-      %h1.remove-bottom Loccasions
-      %h5 Version 0.1
-    .sixteen.columns
-      %hr
-    .one-third.column
-      %h3 What is Loccasions?
-      %p Loccasions is an application to track the time and place of your life events. You define the events you want to track, and you record the occasions of those events. Loccasions will help you mark the place and time, and then visualize the Events and Occasions.
-    .one-third.column
-      %h3 Why Loccasions?
-      %p Loccasions exists to scratch an itch of mine. My kids' bus was showing up at all times of the morning (except the scheduled time) and I was getting frustrated. I thought an app where I could record when (and where) the bus arrived would give me evidence to take to, um, someone. Not very inspirational, really, but there it is...
-    .one-third.column
-      %h3 What's the Word?
-      %ul.square
-        %li
-          %strong> NoOne InParticular
-          \: "OMG! This is exactly what I need!!"
-        %li
-          %strong> A. Famous Person
-          \: "Now the papparazzi will know where (and when) I was!"
-        %li
-          %strong> You
-          \: "Get on with it, already." 
-        = succeed "." do
-          %a{:href => "http://www.getskeleton.com"} www.getskeleton.com.
-        Skeleton is also open-source and has a
-  /
-    JS
-    \==================================================
-  %script{:src => "javascripts/tabs.js"}
-  /
-    End Document
-    \==================================================
 
+    = yield 
