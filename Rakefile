@@ -5,3 +5,7 @@
 require File.expand_path('../config/application', __FILE__)
 
 Loccasions::Application.load_tasks
+
+# Make `rake spec` the default rake task
+Rake::Task[:default].prerequisites.clear
+task :default => [:spec]

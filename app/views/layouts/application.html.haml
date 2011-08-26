@@ -5,7 +5,7 @@
 /[if (gte IE 9)|!(IE)] <html lang="en">
 %head
   %meta{:charset => "utf-8"}
-  %title Loccasions
+  %title= "Loccasions: #{content_for?(:title) ? content_for(:title) : 'Home' }"
   %meta{:content => "Loccasions is a web app to track the time and place of your life events.", :name => "description"}
   %meta{:content => "Glenn Goodrich", :name => "author"}
   /[if lt IE 9]
@@ -33,6 +33,7 @@
 %body
   .container
     #sign_in.sixteen.columns
-      %a(href = "#") Sign In
-
+      %a(href= new_user_session_path ) Sign In
+    %p.notice= notice
+    %p.alert= alert 
     = yield 
