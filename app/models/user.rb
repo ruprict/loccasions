@@ -7,4 +7,5 @@ class User
   field :name
   validates :name, :presence => true, :uniqueness => true
   attr_accessible :name
+  embeds_many :events
 end

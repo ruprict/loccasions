@@ -29,6 +29,7 @@ group :test, :development do
   gem 'jasmine', '~> 1.1.0.rc3'
   gem 'hpricot', '~> 0.8.4'
   gem 'ruby_parser', '~> 2.2.0'
+  gem 'spork', '~> 0.9.0.rc'
 end
 
 # Use unicorn as the web server
