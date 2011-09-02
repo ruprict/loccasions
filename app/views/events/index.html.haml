@@ -1,2 +1,5 @@
-%h1 Events#index
-%p Find me in app/views/events/index.html.haml
+#map
+%ul#events
+  - for event in @events
+    %li= event.name
+

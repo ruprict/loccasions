@@ -4,18 +4,19 @@ feature 'Sign In', %q{
   As an administrator
   I want to sign in to Loccasions
 } do
-  scenario "Click Sign In" do
+  background do
     click_sign_in
+  end
+  scenario "Click Sign In" do
     page.should have_selector("title", :text => "Loccasions: Sign In")
     page.should have_selector('form input[name="user[email]"]')
   end
   scenario "Successful Sign In" do
-    click_sign_in
     FactoryGirl.create(:user)
     fill_in 'Email', :with => 'testy@test.com'
     fill_in 'Password', :with => 'password'
     click_on 'Sign in'
-    current_path.should == events_path
+    current_path.should == user_root_path
   end
   scenario "Unsuccessful Sign In" do
     click_sign_in

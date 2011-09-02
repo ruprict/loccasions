@@ -13,12 +13,6 @@
   
   %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
   /
-    CSS
-    \==================================================
-  %link{:href => "stylesheets/base.css", :rel => "stylesheet"}
-  %link{:href => "stylesheets/skeleton.css", :rel => "stylesheet"}
-  %link{:href => "stylesheets/layout.css", :rel => "stylesheet"}
-  /
     Favicons
     \==================================================
   %link{:href => "images/favicon.ico", :rel => "shortcut icon"}
@@ -29,11 +23,16 @@
   = javascript_include_tag :application
   = csrf_meta_tags
 
-
 %body
   .container
     #sign_in.sixteen.columns
-      %a(href= new_user_session_path ) Sign In
+      %span
+        -if user_signed_in?
+          Hullo #{current_user.name} 
+          |  
+          = link_to "Sign Out", destroy_user_session_path, :method => :delete
+        - else
+          = link_to "Sign In", new_user_session_path 
     %p.notice= notice
     %p.alert= alert 
     = yield 

@@ -30,6 +30,7 @@ group :test, :development do
   gem 'hpricot', '~> 0.8.4'
   gem 'ruby_parser', '~> 2.2.0'
   gem 'spork', '~> 0.9.0.rc'
+  gem 'launchy', '~> 2.0.5'
 end
 
 # Use unicorn as the web server
