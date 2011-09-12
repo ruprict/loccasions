@@ -17,6 +17,7 @@ feature 'Sign In', %q{
     fill_in 'Password', :with => 'password'
     click_on 'Sign in'
     current_path.should == user_root_path
+    page.should have_selector("a", :text => "My Events", :href => user_root_path)
   end
   scenario "Unsuccessful Sign In" do
     click_sign_in
