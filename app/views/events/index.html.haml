@@ -2,10 +2,14 @@
 #map.sixteen_columns
 %ul#events
   - for event in @events
-    %li
-      %span.event_name= event.name 
+    %li{:class => @event == event ? :selected : nil}
+      %span.del_form
+        =button_to "X", event, :confirm => "Are you sure?", :method => :delete
+      %span.event_name
+        = link_to event.name, edit_event_path(event)
       %span.event_description= event.description
-= form_for Event.new do |f|
+      %div.clear
+= form_for @event || Event.new do |f|
   = f.label :name
   = f.text_field :name
   = f.label :description

@@ -5,9 +5,29 @@
 #map {
   height: 350px
 }
-.new_event label, input[type='text'] {
-  display:inline;
+.new_event, .edit_event {
+  label,input[type='text']{
+    display:inline;
+  }
 }
+
 input#event_description {
   width: 500px;
+}
+.selected {
+  background-color: #C66660;
+  color: #f2efe8; 
+}
+.del_form div {
+  float:left;
+}
+.del_form input {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  background: red;
+  color: white;
+  line-height:10px;
+  margin-bottom: 0px;
+  padding: 2px;
 }

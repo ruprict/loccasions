@@ -9,6 +9,7 @@ FactoryGirl.define do
 
   factory :event do
     name "Test Event"
+    description "This is a Test Event"
     user 
   end
 
