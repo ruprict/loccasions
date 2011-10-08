@@ -7,6 +7,8 @@
         =button_to "X", event, :confirm => "Are you sure?", :method => :delete
       %span.event_name
         = link_to event.name, edit_event_path(event)
+      %span.event_details
+        = link_to "Show Details", event_path(event)
       %span.event_description= event.description
       %div.clear
 = form_for @event || Event.new do |f|

@@ -11,7 +11,7 @@ feature 'Add Events', %q{
     fill_in "Name", :with => "New Event"
     fill_in "Description", :with => "This is my new event"
     click_button "Create Event"
-    page.current_path == events_path 
+    page.current_path.should == events_path 
     page.should have_content("New Event")
     page.should have_content("This is my new event")
     page.should have_selector("ul > li")
