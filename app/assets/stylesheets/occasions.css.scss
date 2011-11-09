@@ -1,0 +1,21 @@
+// Place all the styles related to the occasions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.coordinate_input {
+  float:left;
+  padding: 0 0.5em;
+}
+
+.coordinate_input input, .date_field input{
+  float:left;
+  width: 5em;
+  padding-right: .5em;
+}
+.note_field {
+  clear: both;
+}
+.note_field textarea {
+  width: 35em;
+  height: 5em;
+}

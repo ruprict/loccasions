@@ -11,7 +11,7 @@ feature 'Signed In User Events Page', %q{
     login_user(@user)
   end
   scenario "User is signed in" do
-    visit events_path(@user)
+    visit events_path
     page.should have_content(@user.name)
     page.should have_content(@event.name)
   end
@@ -25,7 +25,7 @@ feature 'Unauthorized User Events Page', %q{
     @user = Factory.build(:user)
   end
   scenario "User is not signed in" do
-    visit events_path(@user)
+    visit events_path
     current_path.should == new_user_session_path
   end
 end

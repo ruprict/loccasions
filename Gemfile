@@ -9,7 +9,7 @@ gem 'haml-rails', '~> 0.3.4'
 gem 'bson_ext', '~> 1.4.0'
 
 gem 'rails-backbone', "~> 0.5.3"
-
+gem "inherited_resources", "~> 1.3.0"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

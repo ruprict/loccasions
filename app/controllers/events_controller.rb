@@ -7,11 +7,12 @@ class EventsController < ApplicationController
 
   def show
     @event = current_user.events.find(params[:id])
+    Rails.logger.info("*** Event occasions: #{@event.occasions.inspect}")
   end
   
   def create
     event = current_user.events.build(params[:event])
-    event.save
+    event.save!
     redirect_to events_path
   end
   
@@ -23,8 +24,7 @@ class EventsController < ApplicationController
   
   def update
     event = current_user.events.find(params[:id])
-    event.update_attributes(params[:event])
-    event.save
+    event.update_attributes!(params[:event])
     redirect_to events_path
   end
   
