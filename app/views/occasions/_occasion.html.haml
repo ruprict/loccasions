@@ -1,0 +1,6 @@
+%span.del_form
+  =button_to "X", [occasion.event,occasion], :confirm => "Are you sure?", :method => :delete
+%span.occasion_name
+  = link_to occasion.occurred_at.to_s(:short), edit_event_occasion_path(@event, occasion)
+%span.occasion_note
+  = occasion.note

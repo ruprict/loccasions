@@ -1,0 +1,40 @@
+!!!
+/[if lt IE 7 ] <html class="ie ie6" lang="en">
+/[if IE 7 ] <html class="ie ie7" lang="en">
+/[if IE 8 ] <html class="ie ie8" lang="en">
+/[if (gte IE 9)|!(IE)] <html lang="en">
+%head
+  %meta{:charset => "utf-8"}
+  %title= "Loccasions: #{content_for?(:title) ? content_for(:title) : 'Home' }"
+  %meta{:content => "Loccasions is a web app to track the time and place of your life events.", :name => "description"}
+  %meta{:content => "Glenn Goodrich", :name => "author"}
+  /[if lt IE 9]
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  
+  %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1", :name => "viewport"}
+  /
+    Favicons
+    \==================================================
+  %link{:href => "images/favicon.ico", :rel => "shortcut icon"}
+  %link{:href => "images/apple-touch-icon.png", :rel => "apple-touch-icon"}
+  %link{:href => "images/apple-touch-icon-72x72.png", :rel => "apple-touch-icon", :sizes => "72x72"}
+  %link{:href => "images/apple-touch-icon-114x114.png", :rel => "apple-touch-icon", :sizes => "114x114"}
+  = stylesheet_link_tag :application
+  = javascript_include_tag :application
+  = csrf_meta_tags
+
+%body
+  .container
+    #sign_in.sixteen.columns
+      %span
+        -if user_signed_in?
+          Hullo #{current_user.name} 
+          |  
+          = link_to "My Events", user_root_path
+          |
+          = link_to "Sign Out", destroy_user_session_path, :method => :delete
+        - else
+          = link_to "Sign In", new_user_session_path 
+    %p.notice= notice
+    %p.alert= alert 
+    = yield 

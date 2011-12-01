@@ -1,0 +1,24 @@
+%h2= @event.name
+.description= @event.description
+%div#map.twelve.columns.alpha
+%ul#occasions.four.columns.omega
+  - for occasion in @event.occasions
+    %li
+      = render :partial => "occasions/occasion", :locals => {:occasion => occasion}
+%div.clear
+%div#occasion_form
+  = form_for [@event, current_user.events.find(@event.id).occasions.build()] do |f|
+    %div.coordinate_input
+      = f.label :latitude 
+      = f.text_field :latitude
+    %div.coordinate_input
+      = f.label :longitude
+      = f.text_field :longitude
+    %div.date_field
+      = f.label :occurred_at
+      = f.text_field :occurred_at
+    %div.note_field
+      = f.label :note
+      = f.text_area :note
+    = f.submit "Add"
+

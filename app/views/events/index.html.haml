@@ -1,0 +1,19 @@
+%script
+  var bootstrapEvents = [];
+%h2 Your Events
+#map.sixteen_columns
+%ul#eventsList
+  - for event in @events
+    %script
+      bootstrapEvents.push(new App.Event({ name: "#{event.name}", description: "#{event.description}:", id: "#{event._id}", }));
+    %li{:class => @event == event ? :selected : nil}
+      = render :partial => "event", :locals => {:event => event}
+      %div.clear
+%div#edit_event
+  = form_for @event || Event.new do |f|
+    = f.label :name
+    = f.text_field :name
+    = f.label :description
+    = f.text_field :description
+    = f.submit
+
