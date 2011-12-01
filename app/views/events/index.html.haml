@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 %script
   var bootstrapEvents = [];
 %h2 Your Events
@@ -16,4 +17,19 @@
     = f.label :description
     = f.text_field :description
     = f.submit
+=======
+%h2 Your Events
+#map.sixteen_columns
+%ul#events
+  - for event in @events
+    %li{:class => @event == event ? :selected : nil}
+      = render :partial => "event", :locals => {:event => event}
+      %div.clear
+= form_for @event || Event.new do |f|
+  = f.label :name
+  = f.text_field :name
+  = f.label :description
+  = f.text_field :description
+  = f.submit
+>>>>>>> d87aefd53119a6a9026822ee7aa5409a82cbd55f
 

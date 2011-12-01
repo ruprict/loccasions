@@ -6,6 +6,6 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
   field :name
   validates :name, :presence => true, :uniqueness => true
-  attr_accessible :name
+  attr_accessible :name, :email, :password, :password_confirmation
   embeds_many :events
 end

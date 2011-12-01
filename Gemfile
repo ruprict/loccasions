@@ -26,18 +26,27 @@ group :test, :development do
   gem 'capybara', '~> 1.1.1'
   gem 'factory_girl_rails', '~> 1.1.0'
   gem 'database_cleaner', '~> 0.6.7'
+<<<<<<< HEAD
   gem 'jasmine', :git => 'git://github.com/pivotal/jasmine-gem.git', :branch => '1.2.rc1'
   gem 'hpricot', '~> 0.8.4'
   gem 'ruby_parser', '~> 2.3.1'
+=======
+  gem 'jasmine', '~> 1.1.0.rc3'
+  gem 'hpricot', '~> 0.8.4'
+  gem 'ruby_parser', '~> 2.2.0'
+>>>>>>> d87aefd53119a6a9026822ee7aa5409a82cbd55f
   gem 'spork', '~> 0.9.0.rc9'
   gem 'launchy', '~> 2.0.5'
   gem 'guard-rspec', '~> 0.4.5'
   gem 'guard-spork', '~> 0.2.1'
+<<<<<<< HEAD
   gem 'foreman', '~> 0.24.0'
 end
 
 group :assets do
   gem 'haml-coffee'
+=======
+>>>>>>> d87aefd53119a6a9026822ee7aa5409a82cbd55f
 end
 
 # Use unicorn as the web server
