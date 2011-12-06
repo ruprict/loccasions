@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 GIT
   remote: git://github.com/pivotal/jasmine-gem.git
   revision: 5a7524ae9eaea4fe106a7aaa90ccfb1bc137abe7
@@ -10,8 +9,6 @@ GIT
       rspec (>= 1.3.1)
       selenium-webdriver (>= 0.1.3)
 
-=======
->>>>>>> d87aefd53119a6a9026822ee7aa5409a82cbd55f
 GEM
   remote: http://rubygems.org/
   specs:
@@ -47,17 +44,17 @@ GEM
     addressable (2.2.6)
     arel (2.2.1)
     bcrypt-ruby (3.0.1)
-    bson (1.4.0)
+    bson (1.5.1)
     bson_ext (1.4.0)
     builder (3.0.0)
-    capybara (1.1.1)
+    capybara (1.1.2)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       selenium-webdriver (~> 2.0)
       xpath (~> 0.1.4)
-    childprocess (0.2.2)
+    childprocess (0.2.3)
       ffi (~> 1.0.6)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
@@ -65,42 +62,36 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.1.2)
+    coffee-script-source (1.1.3)
     database_cleaner (0.6.7)
-    devise (1.4.6)
+    devise (1.4.9)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
       warden (~> 1.0.3)
     diff-lcs (1.1.3)
     ejs (1.0.0)
     erubis (2.7.0)
-    execjs (1.2.4)
+    execjs (1.2.11)
       multi_json (~> 1.0)
-    factory_girl (2.0.4)
+    factory_girl (2.0.5)
     factory_girl_rails (1.1.0)
       factory_girl (~> 2.0.0)
       railties (>= 3.0.0)
-    ffi (1.0.9)
-<<<<<<< HEAD
+    ffi (1.0.11)
     foreman (0.24.0)
       term-ansicolor (~> 1.0.5)
       thor (>= 0.13.6)
-=======
->>>>>>> d87aefd53119a6a9026822ee7aa5409a82cbd55f
-    guard (0.7.0)
+    guard (0.8.8)
       thor (~> 0.14.6)
     guard-rspec (0.4.5)
       guard (>= 0.4.0)
     guard-spork (0.2.1)
       guard (>= 0.2.2)
       spork (>= 0.8.4)
-    haml (3.1.2)
-<<<<<<< HEAD
+    haml (3.1.4)
     haml-coffee (0.1.0)
       coffee-script
       execjs
-=======
->>>>>>> d87aefd53119a6a9026822ee7aa5409a82cbd55f
     haml-rails (0.3.4)
       actionpack (~> 3.0)
       activesupport (~> 3.0)
@@ -108,35 +99,26 @@ GEM
       railties (~> 3.0)
     has_scope (0.5.1)
     hike (1.2.1)
-    hpricot (0.8.4)
+    hpricot (0.8.5)
     i18n (0.6.0)
     inherited_resources (1.3.0)
       has_scope (~> 0.5.0)
       responders (~> 0.6.0)
-<<<<<<< HEAD
     jasmine-core (1.2.0.rc1)
-=======
-    jasmine (1.1.0.rc3)
-      jasmine-core (>= 1.1.0.rc2)
-      rack (>= 1.1)
-      rspec (>= 1.3.1)
-      selenium-webdriver (>= 0.1.3)
-    jasmine-core (1.1.0.rc3)
->>>>>>> d87aefd53119a6a9026822ee7aa5409a82cbd55f
-    jquery-rails (1.0.13)
+    jquery-rails (1.0.19)
       railties (~> 3.0)
       thor (~> 0.14)
-    json_pure (1.6.1)
+    json (1.6.3)
     launchy (2.0.5)
       addressable (~> 2.2.6)
     mail (2.3.0)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.16)
-    mongo (1.4.0)
-      bson (= 1.4.0)
-    mongoid (2.2.0)
+    mime-types (1.17.2)
+    mongo (1.5.1)
+      bson (= 1.5.1)
+    mongoid (2.2.4)
       activemodel (~> 3.0)
       mongo (~> 1.3)
       tzinfo (~> 0.3.22)
@@ -146,10 +128,10 @@ GEM
     mongoid_spacial (0.2.13)
       activesupport
       mongoid
-    multi_json (1.0.3)
+    multi_json (1.0.4)
     nokogiri (1.5.0)
     orm_adapter (0.0.5)
-    polyglot (0.3.2)
+    polyglot (0.3.3)
     rack (1.3.5)
     rack-cache (1.0.3)
       rack (>= 0.4)
@@ -167,10 +149,10 @@ GEM
       activesupport (= 3.1.0)
       bundler (~> 1.0)
       railties (= 3.1.0)
-    rails-backbone (0.5.3)
+    rails-backbone (0.5.5)
       coffee-script (~> 2.2.0)
       ejs (~> 1.0.0)
-      rails (~> 3.1.0.rc5)
+      rails (~> 3.1.0)
     railties (3.1.0)
       actionpack (= 3.1.0)
       activesupport (= 3.1.0)
@@ -178,8 +160,9 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (~> 0.14.6)
-    rake (0.9.2)
-    rdoc (3.9.4)
+    rake (0.9.2.2)
+    rdoc (3.11)
+      json (~> 1.4)
     responders (0.6.4)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
@@ -194,49 +177,37 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.6.0)
-<<<<<<< HEAD
     ruby_parser (2.3.1)
-=======
-    ruby_parser (2.2.0)
->>>>>>> d87aefd53119a6a9026822ee7aa5409a82cbd55f
       sexp_processor (~> 3.0)
-    rubyzip (0.9.4)
-    sass (3.1.7)
-    sass-rails (3.1.2)
+    rubyzip (0.9.5)
+    sass (3.1.11)
+    sass-rails (3.1.5)
       actionpack (~> 3.1.0)
       railties (~> 3.1.0)
-      sass (>= 3.1.4)
-      sprockets (~> 2.0.0)
+      sass (~> 3.1.10)
       tilt (~> 1.3.2)
-    selenium-webdriver (2.10.0)
+    selenium-webdriver (2.14.0)
       childprocess (>= 0.2.1)
-      ffi (= 1.0.9)
-      json_pure
+      ffi (~> 1.0.9)
+      multi_json (~> 1.0.4)
       rubyzip
-<<<<<<< HEAD
-    sexp_processor (3.0.7)
-=======
-    sexp_processor (3.0.6)
->>>>>>> d87aefd53119a6a9026822ee7aa5409a82cbd55f
+    sexp_processor (3.0.8)
     spork (0.9.0.rc9)
-    sprockets (2.0.0)
+    sprockets (2.0.3)
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-<<<<<<< HEAD
-    term-ansicolor (1.0.6)
-=======
->>>>>>> d87aefd53119a6a9026822ee7aa5409a82cbd55f
+    term-ansicolor (1.0.7)
     thor (0.14.6)
     tilt (1.3.3)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.29)
-    uglifier (1.0.1)
+    tzinfo (0.3.31)
+    uglifier (1.1.0)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
-    warden (1.0.5)
+    warden (1.0.6)
       rack (>= 1.0)
     xpath (0.1.4)
       nokogiri (~> 1.3)
@@ -251,7 +222,6 @@ DEPENDENCIES
   database_cleaner (~> 0.6.7)
   devise (~> 1.4.6)
   factory_girl_rails (~> 1.1.0)
-<<<<<<< HEAD
   foreman (~> 0.24.0)
   guard-rspec (~> 0.4.5)
   guard-spork (~> 0.2.1)
@@ -261,15 +231,6 @@ DEPENDENCIES
   hpricot (~> 0.8.4)
   inherited_resources (~> 1.3.0)
   jasmine!
-=======
-  guard-rspec (~> 0.4.5)
-  guard-spork (~> 0.2.1)
-  haml (~> 3.1.2)
-  haml-rails (~> 0.3.4)
-  hpricot (~> 0.8.4)
-  inherited_resources (~> 1.3.0)
-  jasmine (~> 1.1.0.rc3)
->>>>>>> d87aefd53119a6a9026822ee7aa5409a82cbd55f
   jquery-rails
   launchy (~> 2.0.5)
   mongoid (~> 2.2.0)
@@ -278,11 +239,7 @@ DEPENDENCIES
   rails (= 3.1.0)
   rails-backbone (~> 0.5.3)
   rspec-rails (~> 2.6.1)
-<<<<<<< HEAD
   ruby_parser (~> 2.3.1)
-=======
-  ruby_parser (~> 2.2.0)
->>>>>>> d87aefd53119a6a9026822ee7aa5409a82cbd55f
   sass-rails (~> 3.1.0)
   spork (~> 0.9.0.rc9)
   uglifier
