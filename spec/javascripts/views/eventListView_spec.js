@@ -21,6 +21,7 @@ describe("EventsListView", function() {
       this.eventView = new Backbone.View();
       this.eventViewStub = sinon.stub(App, "EventView")
         .returns(this.eventView);
+      this.eventViewSpy = sinon.spy(this.eventView, "render");
       this.event1 = new Backbone.Model({id:1});
       this.event2 = new Backbone.Model({id:2});
       this.event3 = new Backbone.Model({id:3});
@@ -39,7 +40,6 @@ describe("EventsListView", function() {
       this.view.render();
       //Assert
       expect(this.eventView.render).toHaveBeenCalledThrice();
-      expect($("ul#event_list li").length).toEqual(3); 
     });
   });
 });
