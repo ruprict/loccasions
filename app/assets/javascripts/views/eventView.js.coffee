@@ -5,7 +5,7 @@ App.EventView = Backbone.View.extend
     "submit form" : "deleteEvent"
   tagName: "li"
   render: ->
-    template = HAML.templates.events.line_item(this.model.attributes)
+    template = App.TemplateProvider.applyTemplate("events","line_item", @model)
     $(this.el).html(template)
     @
   deleteEvent: (e)->

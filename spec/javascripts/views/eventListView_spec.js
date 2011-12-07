@@ -33,6 +33,10 @@ describe("EventsListView", function() {
         ])
       });
     });
+    afterEach(function() {
+      this.eventViewStub.restore();
+      this.eventViewSpy.restore();
+    });
     it("should add a list item for each event", function() {
       //Arrange
       // happening in beforeEach
