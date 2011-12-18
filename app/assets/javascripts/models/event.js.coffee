@@ -1,6 +1,7 @@
 __super = Backbone.Model.prototype
 
 App.Event = Backbone.Model.extend
+  idAttribute: "_id"
   url: ->
     if (this.collection)
       return __super.url.call(@)

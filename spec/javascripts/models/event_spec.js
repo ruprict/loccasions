@@ -35,4 +35,10 @@ describe("Event model", function() {
       expect(this.event.url()).toEqual("/loccasions");
     });
   });
+  describe("id", function() {
+    it("should use _id for the id attribute", function() {
+      var ev = new App.Event({_id:44, name: "MongoEvent"});
+      expect(ev.id).toEqual(44);
+    });
+  });
 });

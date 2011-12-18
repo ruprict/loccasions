@@ -1,8 +1,11 @@
 describe("MapView", function() {
-  it("should use the #map element by default", function() {
+  beforeEach(function() {
     loadFixtures("map.html");
-    var mapProviderSpy = sinon.stub(App.MapProviders.Leaflet);
-    var view = new App.MapView(mapProviderSpy);
-    expect(view.el.id).toEqual("map");
+    this.mapProviderSpy = sinon.stub(App.MapProviders.Leaflet);
+    this.view = new App.MapView(this.mapProviderSpy);
+  });
+
+  it("should use the #map element by default", function() {
+    expect(this.view.el.id).toEqual("map");
   });
 });

@@ -8,7 +8,7 @@
 //= require jquery_ujs
 //= require vendor
 //= require ./app
-//= require ./appRouter
+//= require ./router
 //= require_tree ./lib
 //= require_tree ./models
 //= require_tree ./collections
