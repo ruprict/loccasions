@@ -1,7 +1,7 @@
-describe("App.Router", function() {
+describe("App.EventsIndexRouter", function() {
   describe("routes", function() {
     beforeEach(function() {
-      this.router = new App.Router();
+      this.router = new App.EventsIndexRouter();
       this.routeSpy = sinon.spy();
       try {
         Backbone.history.start({silent: true});
@@ -20,16 +20,18 @@ describe("App.Router", function() {
   describe("index", function() {
     beforeEach(function() {
       loadFixtures("map.html");
-      this.router = new App.Router();
-      this.eventListView = new Backbone.View({});
-      this.eventListViewSpy = sinon.stub(App, "EventListView").returns(this.eventListView);
-      this.mapViewSpy = sinon.stub(App, "MapView").returns(this.eventListView);
+      this.router = new App.EventsIndexRouter();
+      this.mockView = new Backbone.View({});
+      this.eventListViewSpy = sinon.stub(App, "EventListView").returns(this.mockView);
+      this.mapViewSpy = sinon.stub(App, "MapView").returns(this.mockView);
+      this.createViewSpy = sinon.stub(App, "CreateEventView").returns(this.mockView);
       this.router.index();
     });
 
     afterEach(function() {
       App.MapView.restore();
       App.EventListView.restore();
+      App.CreateEventView.restore();
     });
 
     it("should create the EventListView", function() {
@@ -38,6 +40,10 @@ describe("App.Router", function() {
 
     it("should create the MapView", function() {
       expect(this.mapViewSpy).toHaveBeenCalled();
+    });
+
+    it("should create the CreateEventView", function() {
+      expect(this.createViewSpy).toHaveBeenCalled();
     });
   });
 });

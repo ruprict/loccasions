@@ -1,23 +1,23 @@
 App or= {}
-App.EventEditView = Backbone.View.extend(
+App.CreateEventView = Backbone.View.extend(
   el: "#edit_event"
   initialize: ->
     @form = $(this.el).find("form")
   events:
-    "submit form" : "handleFormSubmit"
-
-  handleFormSubmit: (e)->
+    "submit form" : "handleFormSubmission"
+  handleFormSubmission: (e) ->
     e.stopPropagation()
-    evento = new App.Event(@extractEventAttributesFromForm().event)
+    @createEvent()
+    false
+  createEvent: ()->
+    evento = new App.Event(@parseFormAttributes().event)
     has_id = @form.attr("action").match(/\/events\/(\w*)/)
     if has_id
       evento.id = has_id[1]
       evento.save()
     else
       eventCollection.create(evento)
-    false
-  #MOVE THIS
-  extractEventAttributesFromForm: ->
+  parseFormAttributes: ->
     _.inject(
       @form.serializeArray(), 
       (memo, pair) ->

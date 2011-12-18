@@ -8,11 +8,10 @@
 //= require jquery_ujs
 //= require vendor
 //= require ./app
-//= require ./router
+//= require_tree ./routers
 //= require_tree ./lib
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree ./templates
 
-$(App.start)
