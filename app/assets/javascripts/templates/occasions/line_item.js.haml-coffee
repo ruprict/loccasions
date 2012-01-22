@@ -1,0 +1,10 @@
+%span.del_form
+  %div
+    %form.button_to{:method => "post", :action => "/events/#{App.event_id}/occasions/#{@_id}"}
+      %input{:name => "_method", :type => "hidden", :value => "delete"}
+      %input{:data-confirm => "Are you sure?", :type => "submit", :value => "X" }
+  %div.clear
+%span.occasion_note
+  %a{:href => "/events/#{App.event_id}/occasions/#{@_id}/edit"}= @note
+%span.occasion_details
+  %a{:href => "/events/#{App.event_id}/occasions/#{@_id}"}= "Show Details"
