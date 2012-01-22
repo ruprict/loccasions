@@ -1,11 +1,11 @@
 %span.del_form
   %div
-    %form.button_to{:method => "post", :action => "/events/#{@id}"}
+    %form.button_to{:method => "post", :action => "/events/#{@_id}"}
       %input{:name => "_method", :type => "hidden", :value => "delete"}
       %input{:data-confirm => "Are you sure?", :type => "submit", :value => "X" }
   %div.clear
 %span.event_name
-  %a{:href => "/events/#{@id}/edit"}= @name
+  %a{:href => "/events/#{@_id}/edit"}= @name
 %span.event_details
-  %a{:href => "/events/#{@id}"}"Show Details"
+  %a{:href => "/events/#{@_id}"}= "Show Details"
 %span.event_description= @description

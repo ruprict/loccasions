@@ -5,7 +5,7 @@
 %ul#eventsList
   - for event in @events
     %script
-      bootstrapEvents.push(new App.Event({ name: "#{event.name}", description: "#{event.description}:", id: "#{event._id}", }));
+      bootstrapEvents.push(new App.Event({ name: "#{event.name}", description: "#{event.description}:", _id: "#{event._id}", }));
     %li{:class => @event == event ? :selected : nil}
       = render :partial => "event", :locals => {:event => event}
       %div.clear

@@ -1,12 +1,16 @@
+%script
+  var bootstrapOccasions = [];
 %h2= @event.name
 .description= @event.description
 %div#map.twelve.columns.alpha
-%ul#occasions.four.columns.omega
+%ul#occasionsList.four.columns.omega
   - for occasion in @event.occasions
+    %script
+      bootstrapOccasions.push(new App.Occasion({ latitude: "#{occasion.latitude}", longitude: "#{occasion.longitude}:", note: "#{occasion.note}", occurred_at: "#{occasion.occurred_at}", _id: "#{occasion._id}", }));
     %li
       = render :partial => "occasions/occasion", :locals => {:occasion => occasion}
 %div.clear
-%div#occasion_form
+%div#edit_occasion
   = form_for [@event, current_user.events.find(@event.id).occasions.build()] do |f|
     %div.coordinate_input
       = f.label :latitude 

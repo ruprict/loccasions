@@ -15,6 +15,7 @@ src_files:
   - vendor/assets/javascripts/backbone/underscore-min.js
   - vendor/assets/javascripts/backbone/backbone-min.js
   - vendor/assets/javascripts/leaflet/leaflet.js
+  - app/assets/**/util.js.coffee
   - app/assets/**/*.coffee
 
 # stylesheets
