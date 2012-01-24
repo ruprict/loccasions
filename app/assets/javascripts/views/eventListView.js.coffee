@@ -16,4 +16,3 @@ App.EventListView = Backbone.View.extend
       view = new App.EventView({model: ev})
       $(@el ).append(view.render().el)
 
-

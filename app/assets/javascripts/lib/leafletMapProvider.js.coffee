@@ -16,6 +16,36 @@ App.MapProviders.Leaflet  =
     map.addLayer(layer)
   setViewForMap: (map, point, zoomLevel) ->
     map.setView(point, zoomLevel)
+  addOccasion: (map,occ) ->
+    if not @layerGroup?
+      @layerGroup = new L.LayerGroup()
+      map.addLayer(@layerGroup)
+    ll = new L.LatLng(
+      parseFloat(occ.get("latitude")),
+      parseFloat(occ.get("longitude"))
+    )
+    marker = new L.Marker(ll)
+    marker.bindPopup(occ.get("note"))
+    @layerGroup.addLayer(marker)
+  addNewOccasionMarker: (map, e, content) ->
+    ll = new L.LatLng(e.latlng.lat,e.latlng.lng)
+    @marker = new L.Marker(ll)
+    @marker.bindPopup(content)
+    map.addLayer(@marker)
+    @marker.openPopup()
+    $("#occasion_latitude").val(e.latlng.lat)
+    $("#occasion_longitude").val(e.latlng.lng)
+    $("#occasion_occurred_at").val(new Date())
+  addClickHandler: (map, callback) ->
+    map.on('click', callback)
+  hidePopup: (map)->
+    map.closePopup()
+    map.removeLayer(@marker)
+  removeAllMarkers: (map) ->
+    if @layerGroup?
+      @layerGroup.clearLayers()
+
+    
 
 
 

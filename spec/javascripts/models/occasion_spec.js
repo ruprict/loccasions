@@ -1,12 +1,13 @@
 describe("Occasion model", function() {
   beforeEach(function() {
-      var ev = new App.Event({_id: 222});
+      this.ev = new App.Event({_id: 222});
+      App.event_id = this.ev.id;
       this.occ = new App.Occasion({
         latitude: 35.33,
         longitude: -88.44,
         note: "Test",
         _id: 11,
-        event: ev
+        event: this.ev
       }); 
   });
   describe("when instantiated with attributes", function() {

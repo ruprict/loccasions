@@ -6,7 +6,6 @@ App.EventRouter = Backbone.Router.extend
     @occasionListView = new App.OccasionListView
       collection: window.occasionCollection or= new App.OccasionsCollection() 
     @occasionListView.render()
-    @createOccasionView = new App.CreateOccasionView()
     if $('#map').length > 0
       @mapView = new App.MapView(App.MapProviders.Leaflet)
       @mapView.render()

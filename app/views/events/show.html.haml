@@ -6,23 +6,20 @@
 %ul#occasionsList.four.columns.omega
   - for occasion in @event.occasions
     %script
-      bootstrapOccasions.push(new App.Occasion({ latitude: "#{occasion.latitude}", longitude: "#{occasion.longitude}:", note: "#{occasion.note}", occurred_at: "#{occasion.occurred_at}", _id: "#{occasion._id}", }));
+      bootstrapOccasions.push(new App.Occasion({ latitude: "#{occasion.latitude}", longitude: "#{occasion.longitude}", note: "#{occasion.note}", occurred_at: "#{occasion.occurred_at}", _id: "#{occasion._id}", }));
     %li
       = render :partial => "occasions/occasion", :locals => {:occasion => occasion}
 %div.clear
-%div#edit_occasion
-  = form_for [@event, current_user.events.find(@event.id).occasions.build()] do |f|
-    %div.coordinate_input
-      = f.label :latitude 
-      = f.text_field :latitude
-    %div.coordinate_input
-      = f.label :longitude
-      = f.text_field :longitude
-    %div.date_field
-      = f.label :occurred_at
-      = f.text_field :occurred_at
-    %div.note_field
-      = f.label :note
-      = f.text_area :note
-    = f.submit "Add"
+  %div.edit_occasion{ :style => "display:none"}
+    = form_for [@event, current_user.events.find(@event.id).occasions.build()] do |f|
+      %div.coordinate_input
+        = f.hidden_field :latitude
+      %div.coordinate_input
+        = f.hidden_field :longitude
+      %div.date_field
+        = f.hidden_field :occurred_at
+      %div.note_field
+        = f.label :note
+        = f.text_area :note
+      = f.submit "Add"
 
